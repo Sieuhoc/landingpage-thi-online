@@ -16,10 +16,22 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
     background: var(--gradient-main);
     color: var(--text-dark);
     min-height: 100vh;
+}
+/* --- Tiêu đề Hero --- */
+.hero-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--primary-orange);
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 18px rgba(245,158,11,0.18), 0 1px 0 #fff;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
