@@ -1,3 +1,6 @@
+// =====================
+// Countdown Timer
+// =====================
 // Đặt ngày kết thúc sự kiện ở đây (Năm, Tháng - 1, Ngày)
 const countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
 
@@ -20,3 +23,37 @@ const countdownFunction = setInterval(function() {
         document.querySelector(".countdown-timer").innerHTML = "<h4>Đã hết hạn!</h4>";
     }
 }, 1000);
+
+// =====================
+// Form Submit + Popup
+// =====================
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("formspree-register-form");
+    const thankyouPopup = document.getElementById("thankyou-popup");
+
+    if (form) {
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault(); // chặn reload + redirect mặc định
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: { "Accept": "application/json" }
+                });
+
+                if (response.ok) {
+                    // Hiện popup cảm ơn
+                    thankyouPopup.style.display = "flex";
+                    form.reset();
+                } else {
+                    alert("Có lỗi xảy ra, vui lòng thử lại!");
+                }
+            } catch (error) {
+                alert("Không thể kết nối máy chủ, vui lòng thử lại!");
+            }
+        });
+    }
+});

@@ -41,7 +41,7 @@
                     <div class="registration-form" style="position:absolute;top:8%;right:6%;width:38%;z-index:2;min-width:340px;">
                         <div class="form-container">
                             <h2>TRỞ TÀI THI THỬ<br>QUÀ THẬT LIỀN TAY</h2>
-                            <form>
+                            <form action="https://formspree.io/f/xovnbpke" method="POST" id="formspree-register-form">
                                 <div class="countdown-timer">
                                     <div class="time-unit">
                                         <span id="days">00</span><label>Ngày</label>
@@ -56,18 +56,23 @@
                                         <span id="seconds">00</span><label>Giây</label>
                                     </div>
                                 </div>
-                                <input type="text" placeholder="Họ và tên">
-                                <input type="tel" placeholder="Số điện thoại">
-                                <input type="email" placeholder="Email">
-                                <select id="lop-thi-thu">
+                                <input type="text" name="name" placeholder="Họ và tên" required>
+                                <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <select name="class" required>
                                     <option value="">Chọn lớp thi thử</option>
                                     <option value="lop-12">Lớp 12</option>
                                     <option value="lop-11">Lớp 11</option>
                                     <option value="lop-10">Lớp 10</option>
                                 </select>
-                                <input type="password" placeholder="Mật khẩu">
                                 <button type="submit" class="cta-button primary">ĐĂNG KÝ NGAY</button>
-                            </form>
+                                <div id="thankyou-popup" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.25);z-index:9999;justify-content:center;align-items:center;">
+                                    <div style="background:#fff;padding:32px 28px;border-radius:18px;box-shadow:0 8px 32px rgba(59,130,246,0.18);font-size:1.2rem;font-weight:600;color:#0077FF;text-align:center;max-width:90vw;">
+                                        Cảm ơn bạn đã để lại thông tin!<br>Chúng tôi sẽ liên hệ lại sớm nhất.
+                                        <br><button onclick="document.getElementById('thankyou-popup').style.display='none'" style="margin-top:18px;padding:10px 28px;border-radius:8px;background:var(--primary-orange);color:#fff;font-weight:700;border:none;cursor:pointer;">Đóng</button>
+                                    </div>
+                                </div>
+                                </form>
                         </div>
                     </div>
                 </div>
@@ -144,5 +149,8 @@
 </main>
 
     <script src="script.js"></script>
+</body>
+<script>
+</script>
 </body>
 </html>
