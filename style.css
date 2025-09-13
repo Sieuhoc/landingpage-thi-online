@@ -21,18 +21,6 @@ body {
     color: var(--text-dark);
     min-height: 100vh;
 }
-/* --- Tiêu đề Hero --- */
-.hero-title {
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 900;
-    color: var(--primary-orange);
-    letter-spacing: 2px;
-    line-height: 1.2;
-    margin-bottom: 18px;
-    text-shadow: 0 4px 18px rgba(245,158,11,0.18), 0 1px 0 #fff;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
-}
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* --- Top Bar Header --- */
@@ -58,31 +46,52 @@ body {
 }
 .hero-content {
     position: relative;
-    min-height: 600px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
 }
 .hero-illustration {
     position: relative;
     width: 100%;
     max-width: none;
     min-height: 600px;
-    z-index: 1;
 }
-.hero-illustration img {
+.hero-illustration > img {
     width: 100%;
     height: 600px;
     object-fit: cover;
     display: block;
 }
-.registration-form {
-    position: relative;
-    z-index: 20;
-    flex-shrink: 0;
-    width: 340px;
-    margin-top: -100px;
+
+/* === ĐỊNH VỊ CHO DESKTOP === */
+.rules-text {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    width: 48%;
+    z-index: 2;
 }
+.rules-text h2 {
+    color: #F59E0B;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    text-align: left;
+}
+.rules-text ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    list-style: none;
+    padding-left: 0;
+}
+.registration-form {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    width: 38%;
+    min-width: 340px;
+    z-index: 2;
+}
+/* === KẾT THÚC ĐỊNH VỊ CHO DESKTOP === */
+
 .form-container { 
     background: rgba(255,255,255,0.98);
     background-image: var(--gradient-main);
@@ -92,249 +101,181 @@ body {
     text-align: center;
     box-shadow: 0 12px 40px rgba(59,130,246,0.18);
     border: 2px solid var(--primary-orange);
-    animation: fadeInUp 1s;
-    position: relative;
-    z-index: 30;
 }
 .form-container h2 { 
-    font-size: 2.1rem;
-    font-weight: 900;
-    color: var(--primary-orange);
-    line-height: 1.3;
-    text-shadow: 0 2px 8px rgba(245,158,11,0.18);
-    margin-bottom: 18px;
-    z-index: 31;
+    font-size: 2.1rem; font-weight: 900; color: var(--primary-orange);
+    line-height: 1.3; text-shadow: 0 2px 8px rgba(245,158,11,0.18); margin-bottom: 18px;
 }
 .countdown-timer { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
 .time-unit { display: flex; flex-direction: column; align-items: center; }
 .time-unit span { background-color: var(--white); color: var(--purple); font-size: 1.5rem; font-weight: 700; padding: 5px 8px; border-radius: 8px; min-width: 40px; line-height: 1; }
 .time-unit label { font-size: 0.7rem; margin-top: 5px; }
 .form-container form input, .form-container form select { 
-    width: 100%;
-    padding: 14px 18px;
-    margin-bottom: 18px;
-    border: 2px solid var(--primary-blue);
-    border-radius: 12px;
-    font-size: 1.05rem;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.08);
-    background: rgba(255,255,255,0.95);
-    color: var(--text-dark);
+    width: 100%; padding: 14px 18px; margin-bottom: 18px; border: 2px solid var(--primary-blue);
+    border-radius: 12px; font-size: 1.05rem; font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.08); background: rgba(255,255,255,0.95); color: var(--text-dark);
 }
 .form-container form select { 
-    background-color: var(--white); 
-    color: var(--text-dark); 
     appearance: none; 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236D28D9'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); 
-    background-repeat: no-repeat; 
-    background-position: right 15px center; 
-    background-size: 20px; 
+    background-repeat: no-repeat; background-position: right 15px center; background-size: 20px; 
 }
 .form-container form input:focus, .form-container form select:focus { 
-    outline: none;
-    border-color: var(--primary-orange);
-    box-shadow: 0 0 0 2px rgba(245,158,11,0.15);
+    outline: none; border-color: var(--primary-orange); box-shadow: 0 0 0 2px rgba(245,158,11,0.15);
 }
 .cta-button { 
-    width: 100%;
-    padding: 18px;
-    border: none;
-    border-radius: 16px;
-    font-size: 1.2rem;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
-    box-shadow: var(--shadow-btn);
-    background: var(--gradient-btn);
-    letter-spacing: 1px;
+    width: 100%; padding: 18px; border: none; border-radius: 16px; font-size: 1.2rem; font-weight: 800;
+    cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    box-shadow: var(--shadow-btn); background: var(--gradient-btn); letter-spacing: 1px;
 }
 .cta-button:hover { 
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 12px 32px rgba(245,158,11,0.25);
     background: linear-gradient(90deg, #EF4444 0%, #F59E0B 100%);
 }
-.cta-button.primary { background-color: var(--primary-orange); color: var(--white); }
 
 /* --- Quick Navigation --- */
 .quick-nav { 
-    background-color: var(--wave-blue); 
-    padding: 20px 0; 
-    text-align: center; 
-    border-bottom-left-radius: 50% 20%; 
-    border-bottom-right-radius: 50% 20%; 
-    position: relative; 
-    top: -50px; 
-    z-index: 10; 
+    background-color: var(--wave-blue); padding: 20px 0; text-align: center; 
+    border-bottom-left-radius: 50% 20%; border-bottom-right-radius: 50% 20%; 
+    position: relative; top: -50px; z-index: 10; 
 }
 .nav-button { background-color: var(--primary-blue); color: var(--white); text-decoration: none; padding: 12px 30px; margin: 0 10px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: background-color 0.3s; }
 .nav-button:hover { background-color: var(--dark-blue); }
-.nav-button.register-btn { background-color: var(--dark-blue); }
 
-/* --- Awards Section --- */
-.awards-section-simple {
-    background-color: #0d4e99;
-    padding-bottom: 60px;
-    text-align: center;
-    line-height: 0;
-}
+/* --- Sections --- */
+.awards-section-simple { background-color: #0d4e99; padding-bottom: 60px; text-align: center; line-height: 0; }
 .awards-section-simple .container { padding: 0; max-width: 100%; }
 .awards-section-simple img { width: 100%; max-width: 1200px; display: block; margin: 0 auto; }
-.awards-section-simple .cta-button.secondary {
-    margin-top: -30px;
-    position: relative;
-    z-index: 5;
-    width: auto;
-    padding: 15px 50px;
-    font-size: 1.2rem;
-    background-color: var(--secondary-red);
-    color: var(--white);
-}
-
-/* --- Benefits Section --- */
 .benefits-section { background-color: var(--white); padding: 60px 0; }
 .benefits-content { display: flex; align-items: center; gap: 50px; }
 .benefits-image img { max-width: 100%; border-radius: 20px; }
-.benefits-text h2 { font-size: 2.5rem; font-weight: 700; color: var(--primary-blue); }
-.benefits-text h1 { font-size: 3rem; font-weight: 800; }
-.benefits-text .highlight { color: var(--primary-blue); }
-.benefits-text .question { font-size: 2rem; font-weight: 700; margin: 10px 0 25px 0; }
-.benefits-text ul { list-style: none; padding-left: 0; }
-.benefits-text ul li { font-size: 1.1rem; margin-bottom: 15px; padding-left: 30px; position: relative; }
-.benefits-text ul li::before { content: '✔'; color: var(--primary-orange); position: absolute; left: 0; font-weight: bold; }
 
-/* --- Responsive --- */
-@media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: auto;
-        padding-bottom: 30px;
-        text-align: center;
-    }
-    .hero-illustration {
-        position: static;
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto 30px auto;
-        order: 2;
-    }
-    .registration-form {
-        position: relative;
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        order: 1;
-    }
-    .form-container { padding: 18px 8px 16px 8px; border-radius: 18px; }
-    .form-container h2 { font-size: 1.3rem; }
-    .countdown-timer { gap: 6px; margin-bottom: 18px; }
-    .time-unit span { font-size: 1.1rem; min-width: 30px; padding: 4px 6px; }
-    .form-container form input, .form-container form select { font-size: 0.95rem; padding: 10px 12px; margin-bottom: 12px; border-radius: 10px; }
-    .cta-button { font-size: 1rem; padding: 12px; border-radius: 12px; }
-    .benefits-content { flex-direction: column; }
-    .benefits-text { text-align: center; }
-}
-
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: auto;
-        padding-bottom: 20px;
-        text-align: center;
-    }
-    .hero-illustration {
-        position: static;
-        width: 100%;
-        max-width: 100vw;
-        margin: 0 auto 20px auto;
-        order: 2;
-    }
-    .registration-form {
-        position: relative;
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        order: 1;
-    }
-    .form-container { padding: 15px; border-radius: 12px; }
-    .form-container h2 { font-size: 1.1rem; }
-    .countdown-timer { gap: 4px; margin-bottom: 12px; }
-    .time-unit span { font-size: 0.95rem; min-width: 22px; padding: 3px 4px; }
-    .form-container form input, .form-container form select { font-size: 0.85rem; padding: 8px 8px; margin-bottom: 8px; border-radius: 8px; }
-    .cta-button { font-size: 0.95rem; padding: 10px; border-radius: 10px; }
-}
-/* --- Nút CTA trên hình benefits (nằm chồng lên ảnh) --- */
+/* --- Nút CTA trên hình benefits --- */
 .benefits-cta {
-    position: absolute; 
-    right: 22%;         
-    bottom: 6%;        
-    background: var(--gradient-btn);
-    color: #fff;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 900;
-    border-radius: 14px;
-    padding: 18px 48px;
-    box-shadow: 0 8px 32px rgba(245,158,11,0.18);
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    z-index: 10;
-    display: inline-block;
-    transition: all 0.2s ease; /* Thêm transition cho tất cả thuộc tính */
+    background: var(--gradient-btn); color: #fff; font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-size: 1.25rem; font-weight: 900; border-radius: 14px; padding: 18px 48px;
+    box-shadow: 0 8px 32px rgba(245,158,11,0.18); letter-spacing: 1.5px; text-decoration: none;
+    z-index: 10; display: inline-block; transition: all 0.2s ease; position: absolute;
+    right: 8%; bottom: 10%;
+}
+.benefits-cta:hover { transform: scale(1.03); box-shadow: 0 12px 36px rgba(245,158,11,0.24); }
+
+
+/* ==================================================== */
+/* =============== RESPONSIVE TỔNG THỂ =============== */
+/* ==================================================== */
+
+@media (max-width: 992px) {
+    /* === BỐ CỤC MỚI CHO TOP BAR TRÊN MOBILE === */
+    .top-bar-content {
+        display: flex;
+        flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+        justify-content: space-between; /* Đẩy logo và nút về 2 phía */
+        align-items: center; /* Căn giữa logo và nút theo chiều dọc */
+        row-gap: 15px; /* Khoảng cách giữa hàng trên và hàng dưới */
+    }
+    .top-bar .logo {
+        order: 1; /* Logo đầu tiên */
+    }
+    .top-bar-button {
+        order: 2; /* Nút thứ hai */
+        margin-top: 0; /* Bỏ margin cũ */
+    }
+    .top-bar-text {
+        order: 3; /* Chữ nằm cuối cùng */
+        width: 100%; /* Chiếm toàn bộ chiều rộng để tự xuống dòng */
+        text-align: center; /* Căn giữa chữ */
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-top: 0;
+    }
+    .top-bar .logo img {
+        height: 50px; /* Làm cho logo to hơn một chút */
+    }
+    /* === KẾT THÚC BỐ CỤC TOP BAR === */
+    
+    .hero-illustration {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: auto;
+        position: relative;
+        padding-top: 20px;
+    }
+    .rules-text, .registration-form, .hero-illustration > img {
+        position: static;
+        width: 90%;
+        max-width: 450px;
+        right: auto; top: auto; left: auto;
+    }
+
+    .rules-text { 
+        order: 1; 
+        margin-bottom: 0;
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+        padding: 0 20px;
+    }
+    .rules-text h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 10px;
+        color: var(--primary-orange);
+    }
+    .rules-text ul {
+        font-size: 0.95rem;
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+        color: #555;
+    }
+    .rules-text ul li {
+        margin-bottom: 5px;
+    }
+
+    .hero-illustration > img { 
+        order: 2;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 30px;
+    }
+    .registration-form { 
+        order: 3;
+        margin-bottom: 0;
+    }
 }
 
-.benefits-cta:hover {
-    transform: scale(1.03); 
-    box-shadow: 0 12px 36px rgba(245,158,11,0.24);
-}
-
-/* === RESPONSIVE CHO NÚT BENEFITS-CTA === */
-/* Áp dụng cho máy tính bảng và điện thoại */
 @media (max-width: 768px) {
-    .benefits-cta {
-        /* Giảm kích thước chữ và khoảng đệm */
-        font-size: 1rem; /* Kích thước chữ nhỏ hơn */
-        padding: 12px 28px; /* Đệm trong nút nhỏ hơn */
-        letter-spacing: 0.5px; /* Giảm khoảng cách chữ */
-        border-radius: 10px;
+    .rules-text h2 { font-size: 1.3rem; }
+    .rules-text ul { font-size: 0.85rem; }
+    .registration-form { max-width: 90%; }
+    
+    .quick-nav { top: -30px; padding: 15px 0; }
+    .quick-nav .container { gap: 10px; }
+    .nav-button {
+        font-size: 0.9rem; padding: 10px 20px; margin: 0 5px;
+        flex-grow: 1; max-width: 150px;
+    }
 
-        /* Đưa nút ra giữa cho dễ nhìn và dễ bấm trên di động */
+    .benefits-section {
+        padding: 30px 0;
+    }
+    .benefits-cta {
+        font-size: 0.9rem;
+        padding: 10px 24px;
+        letter-spacing: 0.2px;
+        border-radius: 8px;
+        bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
-        right: auto; /* Tắt căn lề phải */
-        bottom: 8%;  /* Điều chỉnh lại khoảng cách lề dưới */
-        width: auto; /* Đảm bảo nút không bị kéo dài */
-        white-space: nowrap; /* Ngăn chữ xuống dòng */
+        width: auto;
+        white-space: nowrap;
     }
-}
-/* --- Nút CTA trên hình hero (nằm chồng lên ảnh) --- */
-.hero-cta {
-    position: absolute;
-    left: 50%;
-    top: 78%;
-    transform: translate(-50%, -50%);
-    background: var(--gradient-btn);
-    color: #fff;
-    font-family: 'Montserrat', 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 900;
-    border-radius: 14px;
-    padding: 18px 48px;
-    box-shadow: 0 8px 32px rgba(245,158,11,0.18);
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    z-index: 10;
-    display: inline-block;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-.hero-cta:hover { transform: translate(-50%, -50%) scale(1.03); box-shadow: 0 12px 36px rgba(245,158,11,0.24); }
-
-@media (max-width: 992px) {
-    .hero-cta { top: 74%; font-size: 1.1rem; padding: 14px 36px; }
-}
-@media (max-width: 600px) {
-    .hero-cta { top: 70%; font-size: 1rem; padding: 12px 28px; border-radius: 12px; }
 }
