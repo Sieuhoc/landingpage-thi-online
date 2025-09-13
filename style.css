@@ -264,18 +264,21 @@ body {
         flex-grow: 1; max-width: 150px;
     }
 
+    /* === Điều chỉnh CTA ở phần benefits-section cho mobile === */
     .benefits-section {
-        padding: 30px 0;
+        padding: 30px 0; /* Giảm padding tổng thể của section */
     }
     .benefits-cta {
-        font-size: 0.9rem;
-        padding: 10px 24px;
-        letter-spacing: 0.2px;
-        border-radius: 8px;
-        bottom: 5%;
-        left: 50%;
+        font-size: 0.7rem;      /* Chữ nhỏ hơn đáng kể */
+        font-weight: 700;       /* Chữ bớt đậm, thanh thoát hơn */
+        padding: 8px 18px;      /* Giảm đệm viền để nút gọn lại */
+        border-radius: 6px;     /* Bo góc ít hơn cho phù hợp */
+        letter-spacing: 0.3px;  /* Tăng nhẹ khoảng cách chữ cho dễ đọc */
+        bottom: 3%;             /* Điều chỉnh lại vị trí một chút cho cân đối */
+        left: 60%;
         transform: translateX(-50%);
         width: auto;
         white-space: nowrap;
     }
+    /* === Kết thúc điều chỉnh CTA === */
 }
