@@ -268,11 +268,9 @@ body {
 }
 /* --- Nút CTA trên hình benefits (nằm chồng lên ảnh) --- */
 .benefits-cta {
-    position: absolute; /* Bắt buộc phải có để định vị nút trên ảnh */
-    right: 22%;         /* Cách lề phải 22% của khung ảnh */
-    bottom: 6%;        /* Cách lề dưới 6% của khung ảnh */
-    
-    /* Các style sao chép từ .hero-cta để giữ nguyên giao diện */
+    position: absolute; 
+    right: 22%;         
+    bottom: 6%;        
     background: var(--gradient-btn);
     color: #fff;
     font-family: 'Montserrat', 'Poppins', sans-serif;
@@ -285,32 +283,31 @@ body {
     text-decoration: none;
     z-index: 10;
     display: inline-block;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transition: all 0.2s ease; /* Thêm transition cho tất cả thuộc tính */
 }
 
 .benefits-cta:hover {
-    transform: scale(1.03); /* Bỏ translate() vì không cần căn giữa */
+    transform: scale(1.03); 
     box-shadow: 0 12px 36px rgba(245,158,11,0.24);
 }
 
-/* --- Responsive cho nút benefits-cta --- */
-@media (max-width: 992px) {
+/* === RESPONSIVE CHO NÚT BENEFITS-CTA === */
+/* Áp dụng cho máy tính bảng và điện thoại */
+@media (max-width: 768px) {
     .benefits-cta {
-        font-size: 1.1rem;
-        padding: 14px 36px;
-    }
-}
+        /* Giảm kích thước chữ và khoảng đệm */
+        font-size: 1rem; /* Kích thước chữ nhỏ hơn */
+        padding: 12px 28px; /* Đệm trong nút nhỏ hơn */
+        letter-spacing: 0.5px; /* Giảm khoảng cách chữ */
+        border-radius: 10px;
 
-@media (max-width: 600px) {
-    .benefits-cta {
-        /* Cho màn hình nhỏ, có thể đưa nút ra giữa cho dễ bấm */
+        /* Đưa nút ra giữa cho dễ nhìn và dễ bấm trên di động */
         left: 50%;
         transform: translateX(-50%);
-        right: auto; /* Bỏ căn lề phải */
-        bottom: 8%;
-        font-size: 1rem;
-        padding: 12px 28px;
-        border-radius: 12px;
+        right: auto; /* Tắt căn lề phải */
+        bottom: 8%;  /* Điều chỉnh lại khoảng cách lề dưới */
+        width: auto; /* Đảm bảo nút không bị kéo dài */
+        white-space: nowrap; /* Ngăn chữ xuống dòng */
     }
 }
 /* --- Nút CTA trên hình hero (nằm chồng lên ảnh) --- */
