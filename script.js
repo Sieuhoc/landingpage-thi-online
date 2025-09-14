@@ -2,7 +2,8 @@
 // Countdown Timer
 // =====================
 // Đặt ngày kết thúc sự kiện ở đây (Năm, Tháng - 1, Ngày)
-const countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
+// Adjust countdown timer to 3 days from now
+const countDownDate = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000).getTime();
 
 const countdownFunction = setInterval(function() {
     const now = new Date().getTime();

@@ -66,7 +66,7 @@ body {
     top: 8%;
     left: 6%;
     width: 48%;
-    z-index: 1;
+    z-index: 2;
 }
 .rules-text h2 {
     color: #F59E0B;
@@ -84,11 +84,11 @@ body {
 }
 .registration-form {
     position: absolute;
-    top: 8%;
+    top: 2%;
     right: 6%;
     width: 38%;
     min-width: 340px;
-    z-index: 2;
+    z-index: 1;
 }
 /* === KẾT THÚC ĐỊNH VỊ CHO DESKTOP === */
 
