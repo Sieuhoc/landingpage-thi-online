@@ -84,11 +84,11 @@ body {
 }
 .registration-form {
     position: absolute;
-    top: 2%;
+    top: 0.5%;
     right: 6%;
     width: 38%;
     min-width: 340px;
-    z-index: 1;
+    z-index: 2;
 }
 /* === KẾT THÚC ĐỊNH VỊ CHO DESKTOP === */
 
