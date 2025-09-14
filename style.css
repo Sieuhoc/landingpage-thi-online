@@ -283,6 +283,17 @@ body {
     /* === Kết thúc điều chỉnh CTA === */
 }
 
+/* Adjust quick navigation to avoid overlapping form */
+.quick-nav {
+    position: relative;
+    z-index: 1;
+}
+
+/* Add margin to form container to avoid overlap */
+.form-container {
+    margin-top: 20px;
+}
+
 /* Popup Overlay */
 #thankyou-popup {
   display: none;
