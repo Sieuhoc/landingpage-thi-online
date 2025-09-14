@@ -281,6 +281,20 @@ body {
         white-space: nowrap;
     }
     /* === Kết thúc điều chỉnh CTA === */
+
+    /* Adjust spacing for mobile view */
+    .hero-section {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .hero-illustration img {
+        margin-bottom: 10px;
+    }
+
+    .registration-form {
+        margin-top: 10px;
+    }
 }
 
 /* Adjust quick navigation to avoid overlapping form */
