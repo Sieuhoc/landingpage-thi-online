@@ -84,8 +84,8 @@ body {
 }
 .registration-form {
     position: absolute;
-    top: 0.5%;
-    right: 6%;
+    top: 0.2%;
+    right: 1%;
     width: 38%;
     min-width: 340px;
     z-index: 2;
