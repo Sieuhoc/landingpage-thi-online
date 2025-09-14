@@ -66,7 +66,7 @@ body {
     top: 8%;
     left: 6%;
     width: 48%;
-    z-index: 2;
+    z-index: 1;
 }
 .rules-text h2 {
     color: #F59E0B;
