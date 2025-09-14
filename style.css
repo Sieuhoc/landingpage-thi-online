@@ -420,3 +420,22 @@ body {
     font-size: 0.85rem;
   }
 }
+
+/* Adjust hero-illustration for responsive images */
+.hero-illustration img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-illustration img {
+        content: url('image9.png');
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-illustration img {
+        content: url('image8.png');
+    }
+}
