@@ -442,14 +442,15 @@ body {
     object-fit: cover;
 }
 
+/* === PHẦN ĐÃ SỬA LỖI === */
 @media (max-width: 768px) {
-    .hero-illustration img {
+    .hero-illustration > img {
         content: url('image9.png');
     }
 }
 
 @media (min-width: 769px) {
-    .hero-illustration img {
+    .hero-illustration > img {
         content: url('image8.png');
     }
 }
