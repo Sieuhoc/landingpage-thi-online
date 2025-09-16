@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sân Quà Cực Xịn - Thi Thử Càng Hăng</title>
+    <title>Săn Quà Cực Xịn - Thi Thử Càng Hăng</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,61 +35,76 @@
                         <div class="form-container" id="form-dang-ky">
                             <h2>TRỔ TÀI THI THỬ<br>NHẬN QUÀ LIỀN TAY</h2>
                             <form action="https://formspree.io/f/xovnbpke" method="POST" id="formspree-register-form">
-                                <div class="countdown-timer">
-                                    <div class="time-unit">
-                                        <span id="days">00</span><label>Ngày</label>
-                                    </div>
-                                    <div class="time-unit">
-                                        <span id="hours">00</span><label>Giờ</label>
-                                    </div>
-                                    <div class="time-unit">
-                                        <span id="minutes">00</span><label>Phút</label>
-                                    </div>
-                                    <div class="time-unit">
-                                        <span id="seconds">00</span><label>Giây</label>
-                                    </div>
-                                </div>
-                                <input type="text" name="name" placeholder="Họ và tên" required>
-                                <input type="tel" name="phone" placeholder="Số điện thoại" required>
-                                <input type="email" name="email" placeholder="Email" required>
-                                <select name="class" required>
-                                    <option value="">Chọn lớp thi thử</option>
-                                    <option value="12">Lớp 12</option>
-                                    <option value="11">Lớp 11</option>
-                                    <option value="10">Lớp 10</option>
-                                </select>
-                                <button type="submit" class="cta-button primary">ĐĂNG KÝ NGAY</button>
-                                <div id="thankyou-popup">
-  <div class="popup-content">
-    <h2>🎉 Đăng ký thành công!</h2>
+    <div class="countdown-timer">
+        <div class="time-unit">
+            <span id="days">00</span><label>Ngày</label>
+        </div>
+        <div class="time-unit">
+            <span id="hours">00</span><label>Giờ</label>
+        </div>
+        <div class="time-unit">
+            <span id="minutes">00</span><label>Phút</label>
+        </div>
+        <div class="time-unit">
+            <span id="seconds">00</span><label>Giây</label>
+        </div>
+    </div>
+
+    <input type="text" name="name" placeholder="Họ và tên" required>
+    <input type="tel" name="phone" placeholder="Số điện thoại" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <select name="class" required>
+        <option value="">Chọn lớp</option>
+        <option value="12">Lớp 12</option>
+        <option value="11">Lớp 11</option>
+        <option value="10">Lớp 10</option>
+    </select>
+
+    <!-- Thêm câu hỏi có tài khoản chưa -->
+    <!-- Thêm câu hỏi có tài khoản chưa -->
+<select name="hasAccount" required>
+    <option value="">Bạn đã có tài khoản Sieuhoc chưa?</option>
+    <option value="yes">Đã có tài khoản</option>
+    <option value="no">Chưa có tài khoản</option>
+</select>
+
+
+    <button type="submit" class="cta-button primary">ĐĂNG KÝ NGAY</button>
+
+    <div id="thankyou-popup">
+        <div class="popup-content">
+            <h2>🎉 Đăng ký thành công!</h2>
+            <div id="new-account-info">
     <p>Bạn được <span class="highlight">tặng khóa học miễn phí lớp <span id="user-class"></span></span></p>
 
-    <div class="account-box">
-      <p>📧 <strong>Tài khoản:</strong> <span id="user-email"></span></p>
-      <p>🔑 <strong>Mật khẩu:</strong> <span id="user-phone"></span></p>
+    <!-- Hộp tài khoản chỉ hiện nếu chưa có tài khoản -->
+    <div class="account-box" id="account-box">
+        <p>📧 <strong>Tài khoản:</strong> <span id="user-email"></span></p>
+        <p>🔑 <strong>Mật khẩu:</strong> <span id="user-phone"></span></p>
     </div>
 
     <p class="note">👉 Vui lòng đăng nhập tại 
       <a href="https://sieuhoc.com" target="_blank">sieuhoc.com</a> 
       sau <span class="highlight">30 phút</span> để bắt đầu học tập.
     </p>
-
-    <h3>💡 Mẹo dành cho bạn</h3>
-    <ul>
-      <li>Càng làm nhiều bài tập trên web, cơ hội đạt giải của bạn càng cao.</li>
-      <li>Sẽ có một số câu về <strong>sieuhoc.com</strong>!</li>
-      <li>Quét QR để nhận <strong>mã quay thưởng </strong>.</li>
-    </ul>
-    <div class="qr-box">
-      <img src="qrcode.jpg" alt="QR Code">
-    </div>
-
-    <button class="close-btn" onclick="document.getElementById('thankyou-popup').style.display='none'">Đóng</button>
-  </div>
 </div>
 
 
-                            </form>
+            <h3>💡 Mẹo dành cho bạn</h3>
+            <ul>
+              <li>Càng làm nhiều bài tập trên web, cơ hội đạt giải của bạn càng cao.</li>
+              <li>Sẽ có một số câu về <strong>sieuhoc.com</strong>!</li>
+            </ul>
+            <h3>Quét QR để nhận <strong>mã dự thi</strong>.</h3>
+            <div class="qr-box">
+              <img src="qrcode.jpg" alt="QR Code">
+            </div>
+
+            <button class="close-btn" onclick="document.getElementById('thankyou-popup').style.display='none'">Đóng</button>
+        </div>
+    </div>
+</form>
+
                         </div>
                     </div>
                 </div>

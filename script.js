@@ -58,3 +58,25 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+document.getElementById('formspree-register-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const hasAccount = formData.get('hasAccount'); // lấy giá trị dropdown
+
+    document.getElementById('user-class').textContent = formData.get('class');
+    document.getElementById('user-email').textContent = formData.get('email');
+    document.getElementById('user-phone').textContent = formData.get('phone');
+
+    if (hasAccount === 'yes') {
+        // Ẩn toàn bộ đoạn tặng khóa học + tài khoản + ghi chú
+        document.getElementById('new-account-info').style.display = 'none';
+    } else {
+        // Hiện lại khi chưa có tài khoản
+        document.getElementById('new-account-info').style.display = 'block';
+    }
+
+    document.getElementById('thankyou-popup').style.display = 'flex';
+});
+
+
