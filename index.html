@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,150 +18,143 @@
                 <a href="#"><img src="logo.jpg" alt="Sieuhoc Logo"></a>
             </div>
             <p class="top-bar-text">
-                Sieuhoc.com - Nền tảng học ONLINE toàn diện từ lớp 7 - 12, được Bộ Công Thương cấp phép hoạt động
+                Sieuhoc.com - Nền tảng học ONLINE toàn diện từ lớp 7 - 12.
             </p>
-            <a href="#form-dang-ky" class="top-bar-button" id="scroll-to-form">
+            <a href="#" class="top-bar-button open-modal-btn">
                 ĐĂNG KÝ<br>NGAY
             </a>
         </div>
     </div>
 
-    <header class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-illustration">
-                    <img src="image8.png" alt="Học tập illustrations">
+    <main>
+        <section class="quick-nav">
+            <div class="container">
+                <a href="#giai-thuong" class="nav-button">GIẢI THƯỞNG</a>
+                <a href="#the-le" class="nav-button">THỂ LỆ</a>
+            </div>
+        </section>
+        
+        <section id="the-le" class="rules-center-section">
+            <div class="container" style="display:flex;justify-content:center;align-items:center;">
+                <img src="image6.png" alt="Thể lệ cuộc thi" style="max-width:100%;border-radius:12px;box-shadow:0 6px 32px rgba(59,130,246,0.13);">
+            </div>
+        </section>
 
-                    <div class="registration-form">
-                        <div class="form-container" id="form-dang-ky">
-                            <h2>TRỔ TÀI THI THỬ<br>NHẬN QUÀ LIỀN TAY</h2>
-                            <form action="https://formspree.io/f/xovnbpke" method="POST" id="formspree-register-form">
-    <div class="countdown-timer">
-        <div class="time-unit">
-            <span id="days">00</span><label>Ngày</label>
-        </div>
-        <div class="time-unit">
-            <span id="hours">00</span><label>Giờ</label>
-        </div>
-        <div class="time-unit">
-            <span id="minutes">00</span><label>Phút</label>
-        </div>
-        <div class="time-unit">
-            <span id="seconds">00</span><label>Giây</label>
+        <section id="giai-thuong" class="awards-section-simple">
+            <div class="container">
+                <img src="image5.png" alt="Thông tin giải thưởng Săn Quà Cực Xịn">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Form -->
+    <div id="registration-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="registration-form">
+                <div class="form-container" id="form-dang-ky">
+                    <h2>GHI DANH HÔM NAY</h2>
+                    <form action="https://formspree.io/f/xovnbpke" method="POST" id="formspree-register-form">
+                        <div class="countdown-timer">
+                            <div class="time-unit"><span id="days">00</span><label>Ngày</label></div>
+                            <div class="time-unit"><span id="hours">00</span><label>Giờ</label></div>
+                            <div class="time-unit"><span id="minutes">00</span><label>Phút</label></div>
+                            <div class="time-unit"><span id="seconds">00</span><label>Giây</label></div>
+                        </div>
+
+                        <input type="text" name="name" placeholder="Họ và tên" required>
+                        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <select name="class" required>
+                            <option value="">Chọn lớp</option>
+                            <option value="12">Lớp 12</option>
+                            <option value="11">Lớp 11</option>
+                            <option value="10">Lớp 10</option>
+                        </select>
+                        <select name="hasAccount" required>
+                            <option value="">Bạn đã có tài khoản Sieuhoc chưa?</option>
+                            <option value="yes">Đã có tài khoản</option>
+                            <option value="no">Chưa có tài khoản</option>
+                        </select>
+
+                        <button type="submit" class="cta-button primary">ĐĂNG KÝ NGAY</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <input type="text" name="name" placeholder="Họ và tên" required>
-    <input type="tel" name="phone" placeholder="Số điện thoại" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <select name="class" required>
-        <option value="">Chọn lớp</option>
-        <option value="12">Lớp 12</option>
-        <option value="11">Lớp 11</option>
-        <option value="10">Lớp 10</option>
-    </select>
-
-    <!-- Thêm câu hỏi có tài khoản chưa -->
-    <!-- Thêm câu hỏi có tài khoản chưa -->
-<select name="hasAccount" required>
-    <option value="">Bạn đã có tài khoản Sieuhoc chưa?</option>
-    <option value="yes">Đã có tài khoản</option>
-    <option value="no">Chưa có tài khoản</option>
-</select>
-
-
-    <button type="submit" class="cta-button primary">ĐĂNG KÝ NGAY</button>
-
+    <!-- Popup Thank you -->
     <div id="thankyou-popup">
         <div class="popup-content">
             <h2>🎉 Đăng ký thành công!</h2>
             <div id="new-account-info">
-    <p>Bạn được <span class="highlight">tặng khóa học miễn phí lớp <span id="user-class"></span></span></p>
-
-    <!-- Hộp tài khoản chỉ hiện nếu chưa có tài khoản -->
-    <div class="account-box" id="account-box">
-        <p>📧 <strong>Tài khoản:</strong> <span id="user-email"></span></p>
-        <p>🔑 <strong>Mật khẩu:</strong> <span id="user-phone"></span></p>
-    </div>
-
-    <p class="note">👉 Vui lòng đăng nhập tại 
-      <a href="https://sieuhoc.com" target="_blank">sieuhoc.com</a> 
-      sau <span class="highlight">30 phút</span> để bắt đầu học tập.
-    </p>
-</div>
-
-
+                <p>Bạn được <span class="highlight">tặng khóa học miễn phí lớp <span id="user-class"></span></span></p>
+                <div class="account-box" id="account-box">
+                    <p>📧 <strong>Tài khoản:</strong> <span id="user-email"></span></p>
+                    <p>🔑 <strong>Mật khẩu:</strong> <span id="user-phone"></span></p>
+                </div>
+                <p class="note">👉 Vui lòng đăng nhập tại <a href="https://sieuhoc.com" target="_blank">sieuhoc.com</a> sau <span class="highlight">30 phút</span> để bắt đầu học tập.</p>
+            </div>
             <h3>💡 Mẹo dành cho bạn</h3>
             <ul>
-              <li>Càng làm nhiều bài tập trên web, cơ hội đạt giải của bạn càng cao.</li>
-              <li>Sẽ có một số câu về <strong>sieuhoc.com</strong>!</li>
+                <li>Càng làm nhiều bài tập trên web, cơ hội đạt giải của bạn càng cao.</li>
+                <li>Sẽ có một số câu về <strong>sieuhoc.com</strong>!</li>
             </ul>
             <h3>Quét QR để nhận <strong>mã dự thi</strong>.</h3>
             <div class="qr-box">
-              <img src="qrcode.jpg" alt="QR Code">
+                <img src="qrcode.jpg" alt="QR Code">
             </div>
-
             <button class="close-btn" onclick="document.getElementById('thankyou-popup').style.display='none'">Đóng</button>
         </div>
     </div>
-</form>
 
-                        </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Trí Tuệ Siêu Việt</h4>
+                    <p class="slogan">Vì tương lai tương sáng - Vì nước Việt phồn vinh</p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Văn phòng 02, Tầng 09, Tòa nhà Pearl Plaza, số 561A Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>0775065224</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>trituesieuvietvn@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <div class="social-icons-wrapper">
+                        <a href="https://www.facebook.com/profile.php?id=61566538827506" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@siu.hc2?_t=ZS-8wyYAyJ2Z5l&_r=1" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@trituesieuviet7290/featured" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="bct-seal">
+                        <a href="http://online.gov.vn/Home/WebDetails/117753" target="_blank" rel="noopener noreferrer" title="Đã đăng ký Bộ Công Thương">
+                            <img src="image10.png" alt="Đã đăng ký Bộ Công Thương">
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <main>
-    <section class="quick-nav">
-        <div class="container">
-            <a href="#giai-thuong" class="nav-button">GIẢI THƯỞNG</a>
-            <a href="#the-le" class="nav-button">THỂ LỆ</a>
-        </div>
-    </section>
+            <hr>
 
-    <section id="the-le" class="rules-center-section">
-        <div class="container" style="display:flex;justify-content:center;align-items:center;">
-            <img src="image6.png" alt="Thể lệ cuộc thi" style="max-width:100%;border-radius:12px;box-shadow:0 6px 32px rgba(59,130,246,0.13);">
-        </div>
-    </section>
-
-    <section id="giai-thuong" class="awards-section-simple">
-        <div class="container">
-            <img src="image5.png" alt="Thông tin giải thưởng Săn Quà Cực Xịn">
-        </div>
-    </section>
-
-    <section class="benefits-section">
-        <div class="container benefits-content">
-            <div class="benefits-image" style="position: relative;"> <img src="image3.png" alt="Giáo viên Sieuhoc" style="width: 100%; display: block;">
-                <a href="https://sieuhoc.com" target="_blank" class="benefits-cta">ĐĂNG KÍ NGAY</a>
+            <div class="footer-bottom">
+                <p>&copy; 2022 Trí Tuệ Siêu Việt</p>
+                <p><strong class="tax-code">Mã số thuế:</strong> 0317425467 cấp ngày 10/08/2022 tại Sở Kế hoạch và đầu tư TPHCM</p>
             </div>
         </div>
-    </section>
-</main>
+    </footer>
 
     <script src="script.js"></script>
-    
-</body>
-<script>
-// Cuộn mượt đến form khi bấm nút ĐĂNG KÝ NGAY trên cùng
-document.getElementById('scroll-to-form').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('form-dang-ky').scrollIntoView({ behavior: 'smooth' });
-});
-</script>
-</body>
-<script>
-    document.getElementById('formspree-register-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        document.getElementById('user-class').textContent = formData.get('class');
-        document.getElementById('user-email').textContent = formData.get('email');
-        document.getElementById('user-phone').textContent = formData.get('phone');
-        document.getElementById('thankyou-popup').style.display = 'flex';
-    });
-</script>
 </body>
 </html>
