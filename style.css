@@ -24,7 +24,7 @@ body {
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* --- Top Bar Header --- */
-.top-bar { background: var(--gradient-main); color: white; padding: 16px 0; font-size: 1rem; box-shadow: var(--shadow-main); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
+.top-bar { background: var(--gradient-main); color: white; padding: 16px 0; font-size: 1rem; box-shadow: var(--shadow-main); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; position: relative;}
 .top-bar-content { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
 .top-bar .logo img { height: 45px; display: block; }
 .top-bar-text { flex-grow: 1; text-align: left; margin: 0; }
@@ -124,6 +124,7 @@ body {
     background-color: var(--wave-blue); padding: 20px 0; text-align: center;
     border-bottom-left-radius: 50% 20%; border-bottom-right-radius: 50% 20%;
     position: relative; z-index: 10;
+    margin-top: 10px;
 }
 .nav-button { background-color: var(--primary-blue); color: var(--white); text-decoration: none; padding: 12px 30px; margin: 0 10px; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); transition: background-color 0.3s; }
 .nav-button:hover { background-color: var(--dark-blue); }
